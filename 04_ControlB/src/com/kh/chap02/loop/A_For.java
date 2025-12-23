@@ -45,6 +45,7 @@ public class A_For {
 			System.out.println("안녕");
 		}
 	}
+	
 	public void method2() {
 		// 1 2 3 4 5
 		for(int i = 1; i<=5; i++) {
@@ -53,73 +54,80 @@ public class A_For {
 	}
 	
 	public void method3() {
-		//1과 10사이의 정수 중 "홀수"만 출력하는 반복문을 만드시오.
+		// 1과 10사이의 정수 중 "홀수"만 출력하는 반복문을 만드시오.
 		// 출력결과 : 1 3 5 7 9
-		// 초기식 : int =1;
+		// 초기식 : int i = 1;
 		
-		//i+=2
+		// i+=2
 		for(int i = 1; i <10; i++) {
-			if(i % 2 ==1) System.out.print(i+" ");
+			if(i % 2 == 1) System.out.print(i+" ");
 		}
-	
+		
+		System.out.println();
+		
 		for(int i = 1; i<10; i+=2) {
 			System.out.print(i+" ");
 		}
 	}
-		public void method4() {
-			// 1 ~ 10까지의 총 합계 
-			int sum = 0;
-			// sum += 1;
-			// sum += 2;
-			// sum += 3;
-			// sum += 4;
-			// ..
-			// sum += i;
-			for(int i = 1; i<= 10; i++) {
-				//int a= 1;
-				//a += sum+i;
-				sum += i;
-			}
-			System.out.println("1부터 10까지의 총 합 : "+sum);
+	
+	public void method4() {
+		// 1 ~ 10까지의 총 합계 
+		int sum = 0;
+		// sum += 1;
+		// sum += 2;
+		// sum += 3;
+		// sum += 4;
+		// ..
+		// sum += i;
+		for(int i = 1; i<= 10; i++) {
+			//int a= 1;
+			//a += sum+i;
+			sum += i;
 		}
-		
+		System.out.println("1부터 10까지의 총 합 : "+sum);
+	}
+	
 	public void method5() {
 		// 1에서부터 매번 달라지는 "랜덤값"까지의 총 합계
-		/*
+		/* 
 		 * java.lang.Math클래스의 random()를 호출하면,
 		 * 매번 다른 "실수형"의 랜덤값을 얻어올 수 있다.
-		 * 랜덤값의 범위
-		 * 0.0 <= 랜덤값 , 1.0
 		 * 
-		 * 만약 1과 10사이의 랜덤값을 구하고 싶다면?
+		 * 랜덤값의 범위
+		 * 0.0 <= 랜덤값 < 1.0
+		 * 
+		 * 만약 1과 10사이의 랜덤값을 얻고 싶다면?
 		 * 
 		 * 1. 우선 10을 곱하기
 		 * 0.0 <= 랜덤값 < 10.0
 		 * 
-		 * 2. 1 더하기;
-		 * 1.0 <=랜덤값 < 11.0
+		 * 2. 1 더하기
+		 * 1.0 <= 랜덤값 < 11.0
 		 * 
-		 * 3.소수점 버리기
-		 * 1<= 랜덤값 <= 10
+		 * 3. 소수점 버리기
+		 * 1 <= 랜덤값 <= 10
+		 * 
+		 * 코드 => 랜덤값 * 10 + 1
 		 * 10 => 출력하고자 하는 갯수
-		 * 1=> 시작 숫자
+		 * 1 => 시작숫자
 		 * Math.random() * 출력할 갯수 + 시작수
-		 * 
-		 */
-		int random = (int)(Math.random() * 10 + 1);
+		 * */
+		int random = (int)(Math.random() * 10 +1);
 		System.out.println("랜덤값 : "+random);
 		
 		int sum = 0;
-				for(int i=1; i<+ random; i++) {
-					sum += i;
-				}
-				System.out.println("sum : " +sum);
+		for(int i=1; i<= random; i++) {
+			sum += i;
 		}
+		
+		System.out.println("sum : " + sum);
+	}
+	
 	public void method6() {
 		//문자열의 문자를 반복
-		String str = "hello"; // 문자열의 길이 5
+		String str = "helloWorld!!!!!!"; // 문자열의 길이 5
 		
-		//System.out.print(str.charAt(0));
+		//System.out.println(str.charAt(0));
 		// i 0,1,2,3,4
 		// 문자열의 길이. length()
 		for(int i = 0; i<str.length(); i++) {
@@ -130,70 +138,35 @@ public class A_For {
 	public void method7() {
 		// 중첩 반복문
 		// 구구단 출력
-		// 2 x 1 = 2
-		// 2 x 2 = 4
-		//  ...
-		// 2 x 9 = 18
-		// 	...
-		// 9 x 9 = 81
-	//
-	for (int dan =2; dan <= 9; dan ++) {
-		for(int i =1; i<=9; i++) {
-			System.out.println(dan+ " x "+i+" = "+(dan*i));
+		// 2 X 1 = 2
+		// 2 X 2 = 4
+		// 2 X 3 = 6 
+		// ...
+		// 2 X 9 = 18
+		for(int i = 1; i<=9; i++) {
+			System.out.println("2 X "+i+" = "+(2 * i));
 		}
-	}
 	}
 	
-	public void method8() {
-		//*****\n
-		//*****\n
-		//*****\n
-		//*****\n
-		// 위 출력 형식을 중첩반복문을 이용하여 완성하시오..
-		
-	for(int num =0; num <4; num++) {
-		for(int i =1; i<5; i++) {
-			System.out.print("*");
-		}
-		//System.out.println();
-		System.out.print("\n");
-	}
-	}
-	public void method9() {
-//		1***\n
-//		for(int i; i<4; i++) {
-//			if( i == 0) System.out.print(1);
-//			else System.out.print("*");
-//		}
-//		System.out.println();
-		
-//		*2**\n
-//		for(int i; i<4; i++) {
-//			if( i == 1) System.out.print(2);
-//			else System.out.print("*");
-//		}
-//		System.out.println();
-		
-//		**3*\n
-//		for(int i; i<4; i++) {
-//			if( i== 2) System.out.print(3);
-//			else System.out.print("*");
-//		}
-//		System.out.println();
-		
-//		***4\n
-//		for(int i; i<4; i++) {
-//			if( i== 3) System.out.print(4);
-//			else System.out.print("*");
-//		}
-//		System.out.println();
-		
-	for(int j=0; j<4; j++) {
-		for(int i=0; i<4; i++) {
-		if(i == j) System.out.print(j+1);
-		else System.out.print("*");
-		}
-			System.out.println();
-		}
-	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+

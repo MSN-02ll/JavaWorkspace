@@ -6,7 +6,7 @@ public class B_Switch {
 	/*
 	 * switch문과 if문의 차이점
 	 * if(조건식) => 조건식을 복잡하게 기술할 수 있음.
-	 * switch는 조건식이 없으며, 확실한 값의 변수만 기술한다
+	 * switch는 조건식이 없으며, 확실한 값의 변수만 기술한다(동등비교 바탕)
 	 * 
 	 *  [표현법]
 	 *  switch(동등비교 수행 대상) {
@@ -17,13 +17,14 @@ public class B_Switch {
 	 *  ...
 	 *  default : 실행할 코드;
 	 *  
-	 *  swith문 
+	 *  swith문의 장점
 	 *  - case를 통해 내가 실행하길 원하는 코드로 프리패스 하기 떄문에 if ~else문
 	 *  보다 "훨씬 빠르"다
 	 *  
 	 *  switch문
 	 *  - 자주 사용되지는 않지만, 정밀한 연산결과가 동일한 속도로 수행되어야 하는 경우
 	 *    사용한다.
+	 *  - ex) 키보드입력, 마우스입력  
 	 */
 	Scanner sc = new Scanner(System.in);
 	public void method1() {
