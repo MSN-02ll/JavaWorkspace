@@ -159,7 +159,8 @@ public class LoopPractice {
 	System.out.print("정수2: ");
 	int num2 = sc.nextInt();
 	
-	if(!cl.equals("+")&&!cl.equals("-")&&!cl.equals("*")&&!cl.equals("/")&&!cl.equals("%")) {
+	if(!cl.equals("+")&&!cl.equals("-")&&!cl.equals("*")
+			&&!cl.equals("/")&&!cl.equals("%")) {
 		System.out.println("없는 연산자입니다. 다시 입력해주세요.");
 		practice7();
 		return;
