@@ -3,7 +3,8 @@ package com.kh.operator;
 public class F_Triple {
 
 	/*
-	 * 삼항연산자 - 3개의 항목을 가지고 연산하는 연산자 [표현법] 조건식 ? 조건이 true인 경우 결과값 : 조건이 false인 경우 결과값
+	 * 삼항연산자 - 3개의 항목을 가지고 연산하는 연산자 
+	 * [표현법] 조건식 ? 조건이 true인 경우 결과값 : 조건이 false인 경우 결과값
 	 */
 	public void method1() {
 		int num = 50;
