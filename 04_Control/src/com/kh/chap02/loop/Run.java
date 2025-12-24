@@ -7,6 +7,6 @@ public class Run {
 		B_while wh = new B_while();
 		//wh.method5();
 		LoopPractice lp = new LoopPractice();
-		lp.practice7();
+		lp.practice12();
 	}
 }

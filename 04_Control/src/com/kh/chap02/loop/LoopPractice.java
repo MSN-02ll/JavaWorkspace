@@ -187,9 +187,151 @@ public class LoopPractice {
 		System.out.println(num1+" "+"%"+" "+num2+" "+"="+(num1%num2));
 		break;
 	}
+//	while(true){
+//	System.out.print("연산자(+, -, *, /, %) : ");
+//	String str = sc.next();
+//	char ch = str.charAt(0);
+//	
+//	if(str.equals("exit")){
+//		System.out.println("프로그램을 종료합니다.");
+//		break;
+//	}
+//	System.out.print("정수1: ");
+//	int num1 = sc.nextInt();
+//	
+//	System.out.print("정수2: ");
+//	int num2 = sc.nextInt();
+//	
+//	if(!str.equals("+")&&!str.equals("-")&&!str.equals("*")
+//			&&!str.equals("/")&&!str.equals("%")) {
+//		System.out.println("없는 연산자입니다. 다시 입력해주세요.");
+//		practice7();
+//		return;
+//	}
+//	if(num2==0 && (ch == '/' || == '%')) {
+//			&&와||중 &&먼저 실행됨.	
+//		System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.");
+//		practice7();
+//		return;
+//	}
+//	switch(ch) {
+//	case "+":
+//		System.out.println(num1+ch+num2+" "+"="+(num1+num2));
+//		break;
+//	case "-":
+//		System.out.println(num1+ch+num2+" "+"="+(num1-num2));
+//		break;
+//	case "*":
+//		System.out.println(num1+ch+num2+" "+"="+(num1*num2));
+//		break;
+//	case "/":
+//		System.out.println(num1+ch+num2+" "+"="+(num1/num2));
+//		break;
+//	case "%":
+//		System.out.println(num1+ch+num2+" "+"="+(num1%num2));
+//		break;
+//	}
+//	}
 	} 
 	
 	public void practice8() {
+		//내부와 외부를 구분하고 각각 에 맞는 수식과 규칙을 찾아서 만듦
+		System.out.print("정수 입력 : ");
+		int num = sc.nextInt();
+		
+		for(int j = 1; j < num+1; j++) {
+			for(int i=0; i<j; i++) {
+				System.out.print("*");
+				}
+			System.out.println();
+		}
+	}
+	public void practice9() {
+		
+		System.out.print("정수 입력 : ");
+		int num = sc.nextInt();
+		
+		for(int j = num; j > 0; j--) {
+			for(int i=j; i>0; i--) {
+				System.out.print("*");
+				}
+			System.out.println();
+		}	
+	}
+	public void practice10() {
+		System.out.print("숫자 : ");
+		int num = sc.nextInt();
+		
+		if(num < 2) {
+			System.out.println("잘못 입력하셨습니다.");
+			return;
+		}
+		
+		// 소수는 1부터 n까지 나누었을 때 나누어 떨어지는 수가 1과 n뿐인 수
+		// 100 % 10 == 0
+		boolean isPrime = true;
+		for(int i=1; i<num+1; i++) {
+			if(num%i==0) {
+				System.out.println("소수가 아닙니다.");
+				isPrime = false;
+				break;
+			}
+			if(isPrime) {
+				System.out.println("소수입니다.");
+			}
+		
+		}
 		
 	}
+	public void practice11() {
+		
+		System.out.print("숫자 : ");
+		int num = sc.nextInt();
+		
+		if(num<2) {
+			System.out.println("잘못 입력하셨습니다.");
+			return;
+		}
+		
+		// 외부반복문: 2~내가 입력한 값까지 반복.
+		// 내부반복문 : 현재 값이 소수인지 아닌지 판단.
+				
+		// num = 5;
+		int count = 0;
+		// i => 2,3,4,5			
+		for(int i=2; i<=num; i++) {
+			boolean isPrime = true;
+			
+			for(int j=2; j<i; j++) {
+				if(i%j==0) {
+					isPrime = false;
+					break;
+				}
+			}
+			if(isPrime) {
+				count++;
+				System.out.print(i+" ");
+			}
+		}
+		System.out.println("\n2부터"+num+"까지"+" "+"소수의 개수는"+count+"개입니다.");	
+	}
+
+	public void practice12() {
+		System.out.print("자연수 하나를 입력하세요: ");
+		int num = sc.nextInt();
+		
+		int count = 0;
+		for(int i=1; i<= num; i++) {
+			// 2 혹은 3의 배수이면 출력.
+			// 2와 3의 공배수이면 갯수 카운팅
+			if(i % 2==0 || i % 3 ==0) {
+				System.out.print(i+" ");
+			}
+			if(i % 2==0 && i % 3 ==0) {
+				count++;
+			}
+		}
+		System.out.println("\n count : "+"="+ count);
+	}
+	
 }
