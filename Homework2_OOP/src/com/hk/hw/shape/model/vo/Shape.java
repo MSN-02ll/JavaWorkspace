@@ -20,7 +20,7 @@ public class Shape {
 	}
 	
 	public String information() {
-		
+		return type+", "+height+", "+width+", "+color;
 	}
 	
 	public void setType(int type) {

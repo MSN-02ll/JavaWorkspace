@@ -8,15 +8,12 @@ public class TriangleController {
 	
 	public double calcArea(double height, double width) {
 		
-		double ar2 = 0;
+		s = new Shape(3, height, width);
 		
-		s.setHeight(height);
-		s.setWidth(width);
+		return (height * width)/2;
 		
-		ar2 = (height * width)/2;
-		
-		return ar2;
 	}
+	
 	public void paintColor(String color) {
 		s.setColor(color);
 	}
