@@ -30,9 +30,16 @@ public class EmployeeController {
 		
 		
 		
-		public void modify(/* 매개변수 생략 */){
+	public void modify(String phone){
 	// 받아온 매개변수를 이용하여 해당 정보 수정
 	}
+	public void modify(int salary){
+			// 받아온 매개변수를 이용하여 해당 정보 수정
+	}
+	public void modify(double bonus){
+		// 받아온 매개변수를 이용하여 해당 정보 수정
+	}
+	
 	public Employee remove(){
 	// 객체 e에 null을 저장하여 객체 삭제
 	}
