@@ -18,10 +18,7 @@ public class Shape {
 		this.width = width;
 		
 	}
-	
-	public String information() {
-		return type+", "+height+", "+width+", "+color;
-	}
+
 	
 	public void setType(int type) {
 		this.type = type;
@@ -51,7 +48,9 @@ public class Shape {
 		return this.color;
 	}
 	
-	
+	public String information() {
+		return type+", "+height+", "+width+", "+color;
+	}
 	
 	
 	

@@ -8,26 +8,16 @@ public class SquareController {
 	
 	public double calcPerimeter(double height, double width) {
 		
-		double pm = 0;
+		s = new Shape(4, height, width);
 		
-		s.setHeight(height);
-		s.setWidth(width);
-		
-		pm = (height+width)*2;
-		
-		return pm;	
+		return (height+width)*2;	
 	}
 	
 	public double calcArea(double height, double width) {
 		
-		double ar = 0;
+		s = new Shape(4,height,width);
 		
-		s.setHeight(height);
-		s.setWidth(width);
-		
-		ar = height * width;
-		
-		return ar;
+		return height * width;
 	}
 	
 	public void paintColor(String color) {
