@@ -37,7 +37,7 @@ public class A_Stringpool {
 	public void method2() {
 		String str1 = new String("hello");
 		String str2 = "hello";
-		String str3 = "hello";
+		String str3 = "hello"; // str2와 주소값 공유
 		String str4 = "world";
 	/*
 	 * 자바에서는 문자열 리터럴 사용시 상수풀에 값을 저장한다.

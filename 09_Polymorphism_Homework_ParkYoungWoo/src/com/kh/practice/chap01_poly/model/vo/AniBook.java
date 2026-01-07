@@ -7,7 +7,7 @@ public class AniBook extends Book {
 	public AniBook() {
 		
 	}
-	public AniBook(String title, String author, String publisher) {
+	public AniBook(String title, String author, String publisher, int accessAge) {
 		super(title,author,publisher);
 		this.accessAge = accessAge;	
 	}
