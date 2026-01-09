@@ -9,11 +9,12 @@ public class FileController {
 	//DAO에 매개변수를 전달하고, DAO로부터 전달받은 값을 다시 반환
 	public boolean checkName(String file) {
 	
-		return true;
+		return fd.checkName(file);
 	}
 	
 	// 전달받은 매개변수를 변경하고 DAO에 전달
 	public void fileSave(String file, StringBuilder sb){
+		fd.fileSave(file, sb.toString());
 		
 	}
 	
